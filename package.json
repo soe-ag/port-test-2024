@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@nuxt/eslint": "^0.6.0",
-    "@nuxt/image": "^1.8.1",
     "@primevue/themes": "^4.1.1",
     "nuxt": "^3.13.2",
     "primevue": "^4.1.1",
@@ -21,9 +20,10 @@
   "devDependencies": {
     "@iconify-json/logos": "^1.2.3",
     "@iconify-json/material-symbols": "^1.2.4",
+    "@nuxt/image": "^1.8.1",
     "@primevue/nuxt-module": "^4.1.1",
     "@unocss/nuxt": "^0.63.4",
-    "@unocss/preset-icons": "^0.63.4",
+    "@unocss/preset-icons": "^0.63.6",
     "@unocss/preset-web-fonts": "^0.63.4",
     "unocss": "^0.63.4"
   }

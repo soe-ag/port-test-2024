@@ -7,11 +7,11 @@
 //   },
 // }).catch((error) => console.log("error", error));
 
-const config = useRuntimeConfig();
+// const config = useRuntimeConfig();
 </script>
 
 <template>
   <div>
-    <div>Save page</div>
+    <div>about page</div>
   </div>
 </template>

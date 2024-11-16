@@ -7,14 +7,14 @@ const menuItems = ref([
   },
 
   {
-    label: "Watch List",
+    label: "About",
     icon: "i-material-symbols-save-rounded",
-    route: "/save",
+    route: "/about",
   },
   {
-    label: "Favorite",
-    icon: "i-material-symbols-favorite",
-    route: "/favorite",
+    label: "Works",
+    icon: "i-material-symbols-build",
+    route: "/works",
   },
   {
     label: "Others",
