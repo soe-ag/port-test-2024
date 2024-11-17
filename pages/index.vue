@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ActiveStock } from "~/utils/type";
+import works from "~/public/data/projectData.json";
 
 const fetchData = async (): Promise<ActiveStock[]> => {
   const data = await $fetch<ActiveStock[]>(
@@ -59,16 +60,16 @@ onMounted(async () => {
         <div id="section1" class="carousel-section text-xl">
           <div class="px-10 py-2">
             <p class="text-gray-300">
-              Frontend Engineer, who is characterized by a strong attention to
-              detail, coupled with a willingness to learn and adapt to new
-              technologies and trends. <br /><br />Diversed background with a
-              Master's degree in Engineering, who can bring strong analytical
-              skills and a creative problem-solving approach to workplace.
-              <br /><br />As a frontend developer, I am passionate about
-              creating user-friendly web applications that provide a seamless
-              and enjoyable experience for users. i also have good design
-              perspective which will help me to create visually appealing and
-              user-friendly interfaces.
+              Frontend engineer skilled in JavaScript, TypeScript, and hands-on
+              experience with frameworks like Vue 3 and Nuxt. With a master’s
+              degree in engineering, I bring a detail-oriented approach and
+              unique perspectives to development.. <br /><br />Enjoy creating
+              user-friendly, visually appealing websites and applications that
+              bring ideas to life. With a good design sense, I focus on crafting
+              interfaces that are both functional and enjoyable for users.<br /><br />
+              In addition to web development, I have an interest in 3D modeling,
+              crypto, and AI, and I enjoy finding practical ways to integrate
+              emerging technologies into modern digital experiences.
             </p>
           </div>
         </div>
@@ -142,10 +143,17 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div id="section3" class="carousel-section">
-          <WorkCard />
+        <div id="section3" class="carousel-section flex flex-col gap-2 p-2">
+          <div v-for="work in works" :key="work.id" class="w-full">
+            <WorkCard
+              :id="work.id"
+              :title="work.title"
+              :description="work.description"
+              :image="work.image"
+            />
+          </div>
         </div>
-        <div id="section4" class="carousel-section">Section 4</div>
+        <!-- <div id="section4" class="carousel-section">Section 4</div> -->
       </div>
     </div>
     <a href="https://www.flaticon.com/free-icons/code" title="code icons"
@@ -175,6 +183,6 @@ onMounted(async () => {
   justify-content: center;
   /* background-color: lightblue; */
   scroll-snap-align: start; /* Snap each section to the start of the container */
-  border: 1px solid #555;
+  /* border: 1px solid #555; */
 }
 </style>
