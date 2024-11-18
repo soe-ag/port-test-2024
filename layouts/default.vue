@@ -6,26 +6,26 @@ const menuItems = ref([
     route: "/",
   },
 
+  // {
+  //   label: "About",
+  //   icon: "i-material-symbols-save-rounded",
+  //   route: "/about",
+  // },
   {
-    label: "About",
-    icon: "i-material-symbols-save-rounded",
-    route: "/about",
-  },
-  {
-    label: "Works",
-    icon: "i-material-symbols-build",
+    label: "Archives",
+    icon: "i-material-symbols-folder-open-rounded",
     route: "/works",
   },
-  {
-    label: "Others",
-    icon: "i-material-symbols-movie-filter",
-    route: "/others",
-  },
-  {
-    label: "Nuxt",
-    icon: "i-logos-nuxt-icon",
-    route: "/sample",
-  },
+  // {
+  //   label: "Others",
+  //   icon: "i-material-symbols-movie-filter",
+  //   route: "/others",
+  // },
+  // {
+  //   label: "Nuxt",
+  //   icon: "i-logos-nuxt-icon",
+  //   route: "/sample",
+  // },
 ]);
 
 const route = useRoute();
@@ -33,9 +33,7 @@ const route = useRoute();
 </script>
 
 <template>
-  <div
-    class="bg-cover bg-fixed bg-blend-overlay bg-center bg-no-repeat h-screen bg-gray-800"
-  >
+  <div class="bg-gray-800 min-h-100vh">
     <nav class="grid grid-cols-5 items-center p-1">
       <!-- Left Menu Items -->
       <div class="col-span-4 flex gap-2">
@@ -55,7 +53,7 @@ const route = useRoute();
       </div>
 
       <!-- Right Menu Item -->
-      <div class="col-span-1 flex justify-end">
+      <!-- <div class="col-span-1 flex justify-end">
         <NuxtLink
           :to="menuItems[4].route"
           :class="{
@@ -67,7 +65,7 @@ const route = useRoute();
           <div :class="menuItems[4].icon" class="text-xs" />
           <div class="text-lg">{{ menuItems[4].label }}</div>
         </NuxtLink>
-      </div>
+      </div> -->
     </nav>
     <slot />
   </div>

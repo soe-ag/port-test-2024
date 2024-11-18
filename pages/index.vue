@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { ActiveStock } from "~/utils/type";
+// import type { ActiveStock } from "~/utils/type";
 import works from "~/public/data/projectData.json";
 
-const fetchData = async (): Promise<ActiveStock[]> => {
-  const data = await $fetch<ActiveStock[]>(
-    "https://financialmodelingprep.com/api/v3/stock_market/actives?apikey=Ai7NmAPUE7MqHIsSWf4dgsoSvOa658He"
-  );
+// const fetchData = async (): Promise<ActiveStock[]> => {
+//   const data = await $fetch<ActiveStock[]>(
+//     "https://financialmodelingprep.com/api/v3/stock_market/actives?apikey=Ai7NmAPUE7MqHIsSWf4dgsoSvOa658He"
+//   );
 
-  console.log(data);
-  return data.slice(0, 10);
-};
+//   console.log(data);
+//   return data.slice(0, 10);
+// };
 
-const activeStocks = ref<ActiveStock[]>([]);
+// const activeStocks = ref<ActiveStock[]>([]);
 onMounted(async () => {
   // activeStocks.value = await fetchData();
 
@@ -42,7 +42,7 @@ onMounted(async () => {
 <template>
   <div class="text-gray-300">
     <div class="grid grid-cols-2 gap-4">
-      <div class="m-2 p-2">
+      <div class="m-2 p-2 m-auto">
         <div class="flex-col flex gap-2 px-20 text-2xl font-semibold">
           <p>SOE AUNG</p>
           <p>Frontend Developer</p>
@@ -58,19 +58,27 @@ onMounted(async () => {
       </div> -->
       <div class="carousel-container bg-gray-800 w-200 h-200">
         <div id="section1" class="carousel-section text-xl">
-          <div class="px-10 py-2">
-            <p class="text-gray-300">
-              Frontend engineer skilled in JavaScript, TypeScript, and hands-on
-              experience with frameworks like Vue 3 and Nuxt. With a master’s
-              degree in engineering, I bring a detail-oriented approach and
-              unique perspectives to development.. <br /><br />Enjoy creating
-              user-friendly, visually appealing websites and applications that
-              bring ideas to life. With a good design sense, I focus on crafting
-              interfaces that are both functional and enjoyable for users.<br /><br />
-              In addition to web development, I have an interest in 3D modeling,
-              crypto, and AI, and I enjoy finding practical ways to integrate
-              emerging technologies into modern digital experiences.
-            </p>
+          <div>
+            <div class="px-10 py-2">
+              <p class="text-gray-300">
+                Frontend engineer skilled in JavaScript, TypeScript, and
+                hands-on experience with frameworks like Vue 3 and Nuxt. With a
+                master’s degree in engineering, I bring a detail-oriented
+                approach and unique perspectives to development..
+                <br /><br />Enjoy creating user-friendly, visually appealing
+                websites and applications that bring ideas to life. With a good
+                design sense, I focus on crafting interfaces that are both
+                functional and enjoyable for users.<br /><br />
+                In addition to web development, I have an interest in 3D
+                modeling, crypto, and AI, and I enjoy finding practical ways to
+                integrate emerging technologies into modern digital experiences.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-end">
+            <div
+              class="i-material-symbols-arrow-cool-down-rounded text-2xl animate-bounce"
+            ></div>
           </div>
         </div>
         <div id="section2" class="carousel-section text-lg">
@@ -142,6 +150,11 @@ onMounted(async () => {
               </div>
             </div>
           </div>
+          <div class="">
+            <div
+              class="i-material-symbols-arrow-cool-down-rounded text-2xl animate-bounce"
+            ></div>
+          </div>
         </div>
         <div id="section3" class="carousel-section flex flex-col gap-2 p-2">
           <div v-for="work in works" :key="work.id" class="w-full">
@@ -150,6 +163,7 @@ onMounted(async () => {
               :title="work.title"
               :description="work.description"
               :image="work.image"
+              :link="work.link"
             />
           </div>
         </div>

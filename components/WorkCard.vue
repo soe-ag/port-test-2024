@@ -4,6 +4,7 @@ defineProps<{
   title: string;
   description: string;
   image: string;
+  link: string;
 }>();
 </script>
 
@@ -16,16 +17,25 @@ defineProps<{
     /> -->
     <div class="w-60%">
       <div class="mb-2 flex gap-2 items-center">
-        <p class="">{{ title }}</p>
-        <div class="i-material-symbols-open-in-new hover:cursor-pointer"></div>
+        <NuxtLink
+          class="decoration-none text-gray-200 hover:text-blue-400 font-semibold"
+          :to="link"
+        >
+          <p class="">{{ title }}</p>
+        </NuxtLink>
+        <!-- <div class="i-material-symbols-open-in-new hover:cursor-pointer"></div> -->
       </div>
       <p class="text-gray-400">
         {{ description }}
       </p>
     </div>
-    <div class="">
-      <NuxtImg :src="image" width="250" class="m-auto rounded-2" />
-    </div>
+    <NuxtLink class="" :to="link">
+      <NuxtImg
+        :src="image"
+        width="250"
+        class="m-auto rounded-2 b-2 b-solid hover:b-blue-400 b-gray-600 hover:cursor-pointer"
+      />
+    </NuxtLink>
     <!-- <div
       class="absolute b-t-0 b-l-0 b-solid b-b-1 b-r-1 b-blue-400 bottom-0 right-0 w-4 h-4"
     /> -->

@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>projects</div>
+  <div>asset tracker page</div>
 </template>
