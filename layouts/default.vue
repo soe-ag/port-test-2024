@@ -33,7 +33,7 @@ const route = useRoute();
 </script>
 
 <template>
-  <div class="bg-gray-800 min-h-100vh">
+  <div class="bg-gray-900 min-h-100vh">
     <nav class="grid grid-cols-5 items-center p-1">
       <!-- Left Menu Items -->
       <div class="col-span-4 flex gap-2">

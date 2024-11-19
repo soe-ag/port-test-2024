@@ -56,7 +56,7 @@ onMounted(async () => {
       <!-- <div class="m-2 p-2">
 
       </div> -->
-      <div class="carousel-container bg-gray-800 w-200 h-200">
+      <div class="carousel-container bg-gray-900 w-200 h-200">
         <div id="section1" class="carousel-section text-xl">
           <div>
             <div class="px-10 py-2">

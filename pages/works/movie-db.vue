@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ScrollTop from "primevue/scrolltop";
+</script>
 
 <template>
   <div class="mx-auto py-8 flex justify-center max-w-250">
@@ -49,7 +51,7 @@
           </div>
         </div>
         <div id="image" class="p-2 m-auto">
-          <NuxtImg src="/images/movie-db-ss.png" width="450" />
+          <NuxtImg src="/images/full-movie.png" width="450" class="rounded-2" />
         </div>
       </section>
 
@@ -148,5 +150,6 @@
         </ul>
       </div>
     </div>
+    <ScrollTop />
   </div>
 </template>
