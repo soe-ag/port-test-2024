@@ -4,7 +4,7 @@ import ScrollTop from "primevue/scrolltop";
 
 <template>
   <div class="mx-auto py-8 flex justify-center max-w-250">
-    <div class="main container flex flex-col gap-6 text-gray-400">
+    <div class="main flex flex-col gap-6 text-gray-400">
       <section class="grid grid-cols-2 gap-4">
         <div class="flex flex-col gap-4">
           <div>
@@ -17,7 +17,18 @@ import ScrollTop from "primevue/scrolltop";
 
               <div class="i-material-symbols-open-in-new text-2xl" />
             </NuxtLink>
-            <h3 class="text-gray-300 mb-2">Overview</h3>
+            <div class="flex gap-4 items-center mb-2">
+              <h3 class="text-gray-300">Overview</h3>
+              <NuxtLink
+                :to="'https://github.com/soe-ag/practice-local-movie-source'"
+                target="_blank"
+              >
+                <div
+                  class="i-simple-icons-github text-white text-xl hover:text-blue-300"
+                />
+              </NuxtLink>
+            </div>
+
             <p class="text-sm">
               This project started from a simple wish, having my own database to
               store and organize my favorite movies and TV series. I had tried
@@ -50,9 +61,17 @@ import ScrollTop from "primevue/scrolltop";
             </p>
           </div>
         </div>
-        <div id="image" class="p-2 m-auto">
-          <NuxtImg src="/images/full-movie.png" width="450" class="rounded-2" />
-        </div>
+        <NuxtLink
+          :to="'https://movie-db-beta.netlify.app/'"
+          target="_blank"
+          class="m-auto"
+        >
+          <NuxtImg
+            src="/images/full-movie.png"
+            width="450"
+            class="rounded-2 b-2 b-solid hover:b-blue-400 b-transparent"
+          />
+        </NuxtLink>
       </section>
 
       <section class="grid grid-cols-2 gap-4">
@@ -108,32 +127,44 @@ import ScrollTop from "primevue/scrolltop";
           </p>
         </div>
         <div class="p-2 m-auto">
-          <div
-            class="i-ic-baseline-contact-support text-6xl text-blue-400 animate-pulse rotate-25"
+          <NuxtImg
+            src="/images/other/question-round.svg"
+            width="200"
+            class="-rotate-10"
           />
         </div>
       </section>
 
-      <div>
-        <h3 class="text-gray-300 mb-2">Lessons learned</h3>
-        <p class="text-sm">
-          Working on this project has been a huge learning experience,
-          especially in building something from scratch. I’ve gained a solid
-          understanding of Nuxt, Supabase, and API implementation, along with
-          the skills to troubleshoot bugs effectively. In the beginning, I
-          focused on getting each feature working, which meant writing simpler
-          code to keep things moving. Later, I went back to refactor it for
-          reusability and clarity, knowing that would make it easier to expand
-          in the future. Since I didn’t start with a defined design or component
-          structure, I found myself constantly writing, deleting, and editing to
-          improve readability and maintainability. This approach worked, but I
-          realized how much easier things would have been with a good design and
-          structure from the start. It would’ve saved time, reduced rework, and
-          probably prevented a few headaches along the way 😄.
-        </p>
-      </div>
+      <section class="grid grid-cols-2 gap-4">
+        <div class="p-2 m-auto">
+          <NuxtImg
+            src="/images/other/study-round.svg"
+            width="300"
+            class="rotate-10"
+          />
+        </div>
+        <div>
+          <h3 class="text-gray-300 mb-2">Lessons learned</h3>
+          <p class="text-sm">
+            Working on this project has been a huge learning experience,
+            especially in building something from scratch. I’ve gained a solid
+            understanding of Nuxt, Supabase, and API implementation, along with
+            the skills to troubleshoot bugs effectively. In the beginning, I
+            focused on getting each feature working, which meant writing simpler
+            code to keep things moving. Later, I went back to refactor it for
+            reusability and clarity, knowing that would make it easier to expand
+            in the future. Since I didn’t start with a defined design or
+            component structure, I found myself constantly writing, deleting,
+            and editing to improve readability and maintainability. This
+            approach worked, but I realized how much easier things would have
+            been with a good design and structure from the start. It would’ve
+            saved time, reduced rework, and probably prevented a few headaches
+            along the way 😄.
+          </p>
+        </div>
+      </section>
 
-      <div>
+      <section>
         <h3 class="text-gray-300 mb-2">Features plan to add later</h3>
         <ul class="ml-4 text-sm">
           <li>
@@ -148,8 +179,20 @@ import ScrollTop from "primevue/scrolltop";
             highest-rated IMDb films
           </li>
         </ul>
-      </div>
+      </section>
+
+      <NuxtLink
+        :to="'/works/asset-tracker'"
+        class="text-right text-sm decoration-none text-blue-400 hover:text-blue-300 flex gap-2 justify-end items-center"
+        ><p>To Next Project</p>
+        <div
+          class="i-material-symbols-arrow-circle-right text-xl animate-pulse"
+      /></NuxtLink>
     </div>
-    <ScrollTop />
+    <ScrollTop
+      :pt="{
+        root: { class: 'bg-blue-400! b-none!' },
+      }"
+    />
   </div>
 </template>

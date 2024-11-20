@@ -37,6 +37,11 @@ onMounted(async () => {
     });
   });
 });
+
+console.log(
+  "https://www.flaticon.com/free-icons/code",
+  " Code icons created by meaicon - Flaticon"
+);
 </script>
 <!-- eslint-disable vue/html-self-closing -->
 <template>
@@ -64,7 +69,7 @@ onMounted(async () => {
                 Frontend engineer skilled in JavaScript, TypeScript, and
                 hands-on experience with frameworks like Vue 3 and Nuxt. With a
                 master’s degree in engineering, I bring a detail-oriented
-                approach and unique perspectives to development..
+                approach and unique perspectives to development.
                 <br /><br />Enjoy creating user-friendly, visually appealing
                 websites and applications that bring ideas to life. With a good
                 design sense, I focus on crafting interfaces that are both
@@ -170,9 +175,6 @@ onMounted(async () => {
         <!-- <div id="section4" class="carousel-section">Section 4</div> -->
       </div>
     </div>
-    <a href="https://www.flaticon.com/free-icons/code" title="code icons"
-      >Code icons created by meaicon - Flaticon</a
-    >
   </div>
 </template>
 

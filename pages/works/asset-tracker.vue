@@ -4,7 +4,7 @@ import ScrollTop from "primevue/scrolltop";
 
 <template>
   <div class="mx-auto py-8 flex justify-center max-w-250">
-    <div class="main container flex flex-col gap-6 text-gray-400">
+    <div class="main flex flex-col gap-6 text-gray-400">
       <section class="grid grid-cols-2 gap-4">
         <div class="flex flex-col gap-4">
           <div>
@@ -17,7 +17,17 @@ import ScrollTop from "primevue/scrolltop";
 
               <div class="i-material-symbols-open-in-new text-2xl" />
             </NuxtLink>
-            <h3 class="text-gray-300 mb-2">Overview</h3>
+            <div class="flex gap-4 items-center mb-2">
+              <h3 class="text-gray-300">Overview</h3>
+              <NuxtLink
+                :to="'https://github.com/soe-ag/practice-asset-tracker'"
+                target="_blank"
+              >
+                <div
+                  class="i-simple-icons-github text-white text-xl hover:text-blue-300"
+                />
+              </NuxtLink>
+            </div>
             <p class="text-sm">
               I have been using TradingView to track stocks, cryptocurrencies,
               and indices for personal investing. While it offers extensive
@@ -56,9 +66,17 @@ import ScrollTop from "primevue/scrolltop";
             </p>
           </div>
         </div>
-        <div id="image" class="p-2 m-auto">
-          <NuxtImg src="/images/full-asset.png" width="450" class="rounded-2" />
-        </div>
+        <NuxtLink
+          :to="'https://asset-tracker-beta.netlify.app/'"
+          target="_blank"
+          class="m-auto"
+        >
+          <NuxtImg
+            src="/images/full-asset.png"
+            width="450"
+            class="rounded-2 b-2 b-solid hover:b-blue-400 b-transparent"
+          />
+        </NuxtLink>
       </section>
 
       <section class="grid grid-cols-2 gap-4">
@@ -110,25 +128,36 @@ import ScrollTop from "primevue/scrolltop";
           </p>
         </div>
         <div class="p-2 m-auto">
-          <div
-            class="i-ic-baseline-contact-support text-6xl text-blue-400 animate-pulse rotate-25"
+          <NuxtImg
+            src="/images/other/question-round.svg"
+            width="200"
+            class="-rotate-10"
           />
         </div>
       </section>
 
-      <div>
-        <h3 class="text-gray-300 mb-2">Lessons learned</h3>
-        <p class="text-sm">
-          The main lesson I learned is how to effectively use lightweight
-          charts. Similar to my previous projects, I planned and implemented
-          features throughout the development process, which involved many
-          trials and errors. It also taught me the importance of adapting to
-          limitations, such as API call restrictions, and finding creative
-          solutions to overcome them.
-        </p>
-      </div>
+      <section class="grid grid-cols-2 gap-4 mb-4">
+        <div class="p-2 m-auto">
+          <NuxtImg
+            src="/images/other/study-round.svg"
+            width="300"
+            class="rotate-10"
+          />
+        </div>
+        <div>
+          <h3 class="text-gray-300 mb-2">Lessons learned</h3>
+          <p class="text-sm">
+            The main lesson I learned is how to effectively use lightweight
+            charts. Similar to my previous projects, I planned and implemented
+            features throughout the development process, which involved many
+            trials and errors. It also taught me the importance of adapting to
+            limitations, such as API call restrictions, and finding creative
+            solutions to overcome them.
+          </p>
+        </div>
+      </section>
 
-      <div>
+      <section>
         <h3 class="text-gray-300 mb-2">Features plan to add later</h3>
         <ul class="ml-4 text-sm">
           <li>
@@ -156,8 +185,22 @@ import ScrollTop from "primevue/scrolltop";
           </li>
           <li>Enable comparisons between selected stocks and index funds.</li>
         </ul>
-      </div>
+      </section>
+
+      <NuxtLink
+        :to="'/works/movie-db'"
+        class="text-right text-sm decoration-none text-blue-400 hover:text-blue-300 flex gap-2 justify-end items-center"
+      >
+        <div
+          class="i-material-symbols-arrow-circle-left text-xl animate-pulse"
+        />
+        <p>To Previous Project</p>
+      </NuxtLink>
     </div>
-    <ScrollTop />
+    <ScrollTop
+      :pt="{
+        root: { class: 'bg-blue-400! b-none!' },
+      }"
+    />
   </div>
 </template>
