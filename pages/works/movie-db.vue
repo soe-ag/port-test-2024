@@ -3,20 +3,20 @@ import ScrollTop from "primevue/scrolltop";
 </script>
 
 <template>
-  <div class="mx-auto py-8 flex justify-center max-w-250">
+  <div class="mx-auto py-8 px-6 flex justify-center max-w-250">
     <div class="main flex flex-col gap-6 text-gray-400">
-      <section class="grid grid-cols-2 gap-4">
-        <div class="flex flex-col gap-4">
-          <div>
-            <NuxtLink
-              class="flex gap-2 items-center mb-2 hover:cursor-pointer hover:text-blue-300 text-blue-400 decoration-none"
-              :to="'https://movie-db-beta.netlify.app/'"
-              target="_blank"
-            >
-              <h2 class="">Personalized Movies Database</h2>
+      <NuxtLink
+        class="flex gap-2 items-center mb-2 hover:cursor-pointer hover:text-blue-300 text-blue-400 decoration-none"
+        :to="'https://movie-db-beta.netlify.app/'"
+        target="_blank"
+      >
+        <h2 class="">Personalized Movies Database</h2>
 
-              <div class="i-material-symbols-open-in-new text-2xl" />
-            </NuxtLink>
+        <div class="i-material-symbols-open-in-new text-2xl" />
+      </NuxtLink>
+      <section class="grid md:grid-cols-2 gap-4 grid-cols-1">
+        <div class="flex flex-col gap-4 max-md:order-2">
+          <div>
             <div class="flex gap-4 items-center mb-2">
               <h3 class="text-gray-300">Overview</h3>
               <NuxtLink
@@ -68,14 +68,15 @@ import ScrollTop from "primevue/scrolltop";
         >
           <NuxtImg
             src="/images/full-movie.png"
-            width="450"
-            class="rounded-2 b-2 b-solid hover:b-blue-400 b-transparent"
+            class="rounded-2 b-2 b-solid hover:b-blue-400 b-transparent w-80 lg:w-100"
           />
         </NuxtLink>
       </section>
 
-      <section class="grid grid-cols-2 gap-4">
-        <div class="p-2 m-auto flex justify-center gap-8 text-3xl">
+      <section class="grid md:grid-cols-2 gap-4 grid-cols-1">
+        <div
+          class="p-2 m-auto flex justify-center gap-8 text-3xl max-md:order-2"
+        >
           <div class="i-logos-vue" />
           <div class="i-logos-nuxt-icon" />
           <div class="i-logos-unocss" />
@@ -99,7 +100,7 @@ import ScrollTop from "primevue/scrolltop";
         </div>
       </section>
 
-      <section class="grid grid-cols-2 gap-4">
+      <section class="grid md:grid-cols-2 gap-4 grid-cols-1">
         <div>
           <h3 class="text-gray-300 mb-2">Problems and thought process</h3>
           <p class="text-sm">
@@ -130,17 +131,17 @@ import ScrollTop from "primevue/scrolltop";
           <NuxtImg
             src="/images/other/question-round.svg"
             width="200"
-            class="-rotate-10"
+            class="-rotate-10 my-4"
           />
         </div>
       </section>
 
-      <section class="grid grid-cols-2 gap-4">
-        <div class="p-2 m-auto">
+      <section class="grid md:grid-cols-2 gap-4 grid-cols-1">
+        <div class="p-2 m-auto max-md:order-2">
           <NuxtImg
             src="/images/other/study-round.svg"
             width="300"
-            class="rotate-10"
+            class="rotate-10 my-6"
           />
         </div>
         <div>
@@ -183,7 +184,7 @@ import ScrollTop from "primevue/scrolltop";
 
       <NuxtLink
         :to="'/works/asset-tracker'"
-        class="text-right text-sm decoration-none text-blue-400 hover:text-blue-300 flex gap-2 justify-end items-center"
+        class="text-sm decoration-none text-blue-400 hover:text-blue-300 flex gap-2 justify-center lg:justify-end items-center"
         ><p>To Next Project</p>
         <div
           class="i-material-symbols-arrow-circle-right text-xl animate-pulse"
