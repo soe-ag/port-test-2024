@@ -15,8 +15,8 @@ import works from "~/public/data/projectData.json";
 onMounted(async () => {
   // activeStocks.value = await fetchData();
 
-  const container = document.querySelector(".carousel-container");
-  const sections = document.querySelectorAll(".carousel-section");
+  const container = document.querySelector(".container");
+  const sections = document.querySelectorAll(".subsection");
 
   let currentSectionIndex = 0;
 
@@ -61,8 +61,13 @@ console.log(
       <!-- <div class="m-2 p-2">
 
       </div> -->
-      <div class="carousel-container bg-gray-900 w-200 h-200">
-        <div id="section1" class="carousel-section text-xl">
+      <div
+        class="scroll-smooth container bg-gray-900 w-200 h-200 flex snap-x snap-mandatory overflow-x-scroll"
+      >
+        <div
+          id="section1"
+          class="subsection flex-none basis-full flex justify-center items-center snap-start text-xl"
+        >
           <div>
             <div class="px-10 py-2">
               <p class="text-gray-300">
@@ -86,7 +91,10 @@ console.log(
             ></div>
           </div>
         </div>
-        <div id="section2" class="carousel-section text-lg">
+        <div
+          id="section2"
+          class="subsection flex-none basis-full flex justify-center items-center snap-start text-lg"
+        >
           <div class="h-80% flex flex-col gap-2 justify-evenly">
             <!-- <p>Experiences</p> -->
             <div class="m-1">
@@ -161,7 +169,10 @@ console.log(
             ></div>
           </div>
         </div>
-        <div id="section3" class="carousel-section flex flex-col gap-2 p-2">
+        <div
+          id="section3"
+          class="subsection flex-none basis-full flex justify-center items-center snap-start flex flex-col gap-2 p-2"
+        >
           <div v-for="work in works" :key="work.id" class="w-full">
             <WorkCard
               :id="work.id"
@@ -172,33 +183,33 @@ console.log(
             />
           </div>
         </div>
-        <!-- <div id="section4" class="carousel-section">Section 4</div> -->
+        <!-- <div id="section4" class="subsection">Section 4</div> -->
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.carousel-container {
-  /* overflow: hidden;  Hide overflow content */
-  display: flex; /* Flex layout for horizontal alignment */
-  scroll-snap-type: x mandatory; /* Enable horizontal snap scrolling */
-  overflow-x: scroll; /* Horizontal scroll enabled */
-  scrollbar-width: none; /* Hide scrollbar (Firefox) */
-}
+/* .container { */
+/* overflow: hidden;  Hide overflow content */
+/* display: flex; Flex layout for horizontal alignment */
+/* scroll-snap-type: x mandatory; Enable horizontal snap scrolling */
+/* overflow-x: scroll; Horizontal scroll enabled */
+/* scrollbar-width: none; Hide scrollbar (Firefox) */
+/* } */
 
-.carousel-container::-webkit-scrollbar {
+.container::-webkit-scrollbar {
   display: none; /* Hide scrollbar (WebKit) */
 }
 
-.carousel-section {
-  flex: 0 0 100%; /* Each section takes 100% of the container's width */
-  height: 100%;
-  display: flex;
+/* .subsection { */
+/* flex: 0 0 100%; Each section takes 100% of the container's width */
+/* height: 100%; */
+/* display: flex;
   align-items: center;
-  justify-content: center;
-  /* background-color: lightblue; */
-  scroll-snap-align: start; /* Snap each section to the start of the container */
-  /* border: 1px solid #555; */
-}
+  justify-content: center; */
+/* background-color: lightblue; */
+/* scroll-snap-align: start; Snap each section to the start of the container */
+/* border: 1px solid #555; */
+/* } */
 </style>
