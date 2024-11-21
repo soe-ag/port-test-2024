@@ -23,10 +23,7 @@ defineProps<{
         >
           <p class="text-sm text-wrap">{{ title }}</p>
         </NuxtLink>
-        <NuxtLink
-          :to="'https://github.com/soe-ag/practice-local-movie-source'"
-          target="_blank"
-        >
+        <NuxtLink :to="github" target="_blank">
           <div
             class="i-simple-icons-github text-white text-xl hover:text-blue-300"
           />
@@ -40,7 +37,7 @@ defineProps<{
     <NuxtLink class="" :to="link" target="_blank">
       <NuxtImg
         :src="image"
-        class="m-auto rounded-2 b-2 b-solid w-40 lg:w-50 xl:w-60 hover:b-blue-400 b-gray-600 hover:cursor-pointer"
+        class="m-auto rounded-2 b-2 b-solid w-40 lg:w-60 hover:b-blue-400 b-gray-600 hover:cursor-pointer"
       />
     </NuxtLink>
     <!-- <div

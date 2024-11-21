@@ -2,7 +2,7 @@
 
 <template>
   <div class="p-4 md:p-8 max-w-250 m-auto">
-    <h3 class="text-center mb-4">Past Works</h3>
+    <h3 class="text-center mb-8">Past Works</h3>
     <section class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <ArchiveCard
         title="Old Portfolio Website"

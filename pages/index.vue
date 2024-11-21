@@ -50,7 +50,9 @@ console.log(
   >
     <div class="grid lg:grid-cols-2 gap-1">
       <div class="m-4 p-2 flex justify-start lg:justify-center items-center">
-        <div class="flex-col flex gap-2 p-4 lg:px-20 text-2xl font-semibold">
+        <div
+          class="flex-col flex gap-2 p-2 lg:p-4 lg:px-20 text-xl lg:text-2xl font-semibold"
+        >
           <div class="flex gap-4 items-center">
             <p>SOE AUNG</p>
             <NuxtLink :to="'https://github.com/soe-ag'" target="_blank">
