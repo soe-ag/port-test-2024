@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const menuItems = ref([
   {
-    label: "Home",
+    label: "",
     icon: "i-material-symbols-home-rounded",
     route: "/",
   },
@@ -12,7 +12,7 @@ const menuItems = ref([
   //   route: "/about",
   // },
   {
-    label: "Archives",
+    label: "",
     icon: "i-material-symbols-folder-open-rounded",
     route: "/works",
   },
@@ -33,8 +33,8 @@ const route = useRoute();
 </script>
 
 <template>
-  <div class="bg-gray-900 min-h-100vh">
-    <nav class="grid grid-cols-5 items-center p-1">
+  <div class="bg-#040D12 min-h-100vh">
+    <nav class="flex justify-end items-center p-1">
       <!-- Left Menu Items -->
       <div class="col-span-4 flex gap-2">
         <div v-for="menu in menuItems.slice(0, 4)" :key="menu.label">
@@ -44,10 +44,10 @@ const route = useRoute();
               'text-blue-4 ': route.path === menu.route,
               'text-white hover:text-blue-4': route.path !== menu.route,
             }"
-            class="no-underline rounded-1 m-1 w-fit px-2 h-8 flex justify-center items-center gap-1"
+            class="no-underline rounded-1 m-1 w-fit px-1 h-8 flex justify-center items-center gap-1"
           >
-            <div :class="menu.icon" />
-            <div class="text-lg">{{ menu.label }}</div>
+            <div :class="menu.icon" class="text-xl" />
+            <div class="">{{ menu.label }}</div>
           </NuxtLink>
         </div>
       </div>

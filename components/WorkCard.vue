@@ -10,13 +10,13 @@ defineProps<{
 
 <template>
   <div
-    class="flex gap-4 justify-between items-center text-gray-300 p-4 relative"
+    class="flex flex-col sm:flex-row gap-4 justify-evenly items-center text-gray-300 relative"
   >
     <!-- <div
       class="absolute b-t-1 b-l-1 b-solid b-b-0 b-r-0 b-blue-400 top-0 left-0 w-4 h-4"
     /> -->
-    <div class="w-60%">
-      <div class="mb-2 flex gap-2 items-center">
+    <div class="w-full sm:w-60% text-center sm:text-left">
+      <div class="mb-2 flex gap-2 items-center max-sm:justify-center">
         <NuxtLink
           class="decoration-none text-gray-200 hover:text-blue-400 font-semibold"
           :to="link"
@@ -25,15 +25,14 @@ defineProps<{
         </NuxtLink>
         <!-- <div class="i-material-symbols-open-in-new hover:cursor-pointer"></div> -->
       </div>
-      <p class="text-gray-400">
+      <p class="text-gray-400 text-sm lg:text-base">
         {{ description }}
       </p>
     </div>
     <NuxtLink class="" :to="link">
       <NuxtImg
         :src="image"
-        width="250"
-        class="m-auto rounded-2 b-2 b-solid hover:b-blue-400 b-gray-600 hover:cursor-pointer"
+        class="m-auto rounded-2 b-2 b-solid w-50 lg:w-55 xl:w-60 hover:b-blue-400 b-gray-600 hover:cursor-pointer"
       />
     </NuxtLink>
     <!-- <div

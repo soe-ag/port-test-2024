@@ -12,31 +12,31 @@ import works from "~/public/data/projectData.json";
 // };
 
 // const activeStocks = ref<ActiveStock[]>([]);
-onMounted(async () => {
-  // activeStocks.value = await fetchData();
+// onMounted(async () => {
+//   // activeStocks.value = await fetchData();
 
-  const container = document.querySelector(".container");
-  const sections = document.querySelectorAll(".subsection");
+//   const maincon = document.querySelector(".maincon");
+//   const sections = document.querySelectorAll(".subsection");
 
-  let currentSectionIndex = 0;
+//   let currentSectionIndex = 0;
 
-  container.addEventListener("wheel", (event) => {
-    event.preventDefault(); // Prevent default scroll behavior
+//   maincon.addEventListener("wheel", (event) => {
+//     event.preventDefault(); // Prevent default scroll behavior
 
-    if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
-      // Scroll right
-      currentSectionIndex++;
-    } else if (event.deltaY < 0 && currentSectionIndex > 0) {
-      // Scroll left
-      currentSectionIndex--;
-    }
+//     if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
+//       // Scroll right
+//       currentSectionIndex++;
+//     } else if (event.deltaY < 0 && currentSectionIndex > 0) {
+//       // Scroll left
+//       currentSectionIndex--;
+//     }
 
-    sections[currentSectionIndex].scrollIntoView({
-      behavior: "smooth",
-      inline: "start",
-    });
-  });
-});
+//     sections[currentSectionIndex].scrollIntoView({
+//       behavior: "smooth",
+//       inline: "start",
+//     });
+//   });
+// });
 
 console.log(
   "https://www.flaticon.com/free-icons/code",
@@ -45,11 +45,20 @@ console.log(
 </script>
 <!-- eslint-disable vue/html-self-closing -->
 <template>
-  <div class="text-gray-300">
-    <div class="grid grid-cols-2 gap-4">
-      <div class="m-2 p-2 m-auto">
-        <div class="flex-col flex gap-2 px-20 text-2xl font-semibold">
-          <p>SOE AUNG</p>
+  <div
+    class="text-gray-300 bg-#040D12 flex justify-center items-center h-auto lg:h-90vh px-6 py-2 lg:p-8"
+  >
+    <div class="grid lg:grid-cols-2 gap-1">
+      <div class="m-4 p-2 flex justify-start lg:justify-center items-center">
+        <div class="flex-col flex gap-2 p-4 lg:px-20 text-2xl font-semibold">
+          <div class="flex gap-4 items-center">
+            <p>SOE AUNG</p>
+            <NuxtLink :to="'https://github.com/soe-ag'" target="_blank">
+              <div
+                class="i-simple-icons-github text-white text-xl hover:text-blue-300"
+              />
+            </NuxtLink>
+          </div>
           <p>Frontend Developer</p>
           <p class="text-gray-500 text-base">
             Build functional and visually appealing responsive web applications
@@ -58,56 +67,64 @@ console.log(
           </p>
         </div>
       </div>
+
       <!-- <div class="m-2 p-2">
 
       </div> -->
       <div
-        class="scroll-smooth container bg-gray-900 w-200 h-200 flex snap-x snap-mandatory overflow-x-scroll"
+        class="scroll-auto maincon m-auto w-fit h-auto lg:max-w-200 lg:h-180 flex flex-col gap-8 lg:gap-2 lg:snap-y lg:snap-mandatory lg:overflow-auto"
       >
-        <div
-          id="section1"
-          class="subsection flex-none basis-full flex justify-center items-center snap-start text-xl"
+        <!-- <div
+        class="scroll-smooth maincon m-auto w-fit h-fit lg:w-200 lg:h-200 flex flex-col gap-8 lg:gap-2 lg:flex-row lg:snap-x lg:snap-mandatory lg:overflow-x-scroll"
+      > -->
+        <section
+          class="subsection p-4 flex-none basis-full flex justify-center items-center snap-start text-base lg:text-lg w-auto md:w-150 lg:w-auto md:m-auto"
         >
-          <div>
-            <div class="px-10 py-2">
-              <p class="text-gray-300">
-                Frontend engineer skilled in JavaScript, TypeScript, and
-                hands-on experience with frameworks like Vue 3 and Nuxt. With a
-                master’s degree in engineering, I bring a detail-oriented
-                approach and unique perspectives to development.
-                <br /><br />Enjoy creating user-friendly, visually appealing
-                websites and applications that bring ideas to life. With a good
-                design sense, I focus on crafting interfaces that are both
-                functional and enjoyable for users.<br /><br />
-                In addition to web development, I have an interest in 3D
-                modeling, crypto, and AI, and I enjoy finding practical ways to
-                integrate emerging technologies into modern digital experiences.
-              </p>
+          <div class="px-2 sm:px-4 md:px-6 lg:px-8 py-2 flex-1">
+            <div class="text-gray-300 align-middle">
+              Frontend engineer skilled in JavaScript, TypeScript, and hands-on
+              experience with frameworks like
+              <div class="i-logos-vue inline-block text-base"></div>
+              and
+              <div class="i-logos-nuxt-icon inline-block text-base ml-1"></div>
+              . With a master’s degree in engineering, I bring a detail-oriented
+              approach and unique perspectives to development. <br /><br /><span
+                class="hidden lg:inline-block"
+                >Enjoy creating user-friendly, visually appealing websites and
+                applications that bring ideas to life. With a good design sense,
+                I focus on crafting interfaces that are both functional and
+                enjoyable for users.<br /><br
+              /></span>
+              In addition to web development, I have an interest in 3D modeling,
+              blockchain, and AI, and I enjoy finding practical ways to
+              integrate emerging technologies into modern digital experiences.
             </div>
           </div>
-          <div class="flex items-end">
+          <div class="hidden lg:block w-10">
             <div
               class="i-material-symbols-arrow-cool-down-rounded text-2xl animate-bounce"
             ></div>
           </div>
-        </div>
-        <div
+        </section>
+        <section
           id="section2"
-          class="subsection flex-none basis-full flex justify-center items-center snap-start text-lg"
+          class="subsection p-4 flex-none basis-full flex justify-center gap-4 items-center snap-start text-sm lg:text-base m-auto"
         >
-          <div class="h-80% flex flex-col gap-2 justify-evenly">
+          <div class="flex flex-col gap-6 justify-evenly flex-1">
             <!-- <p>Experiences</p> -->
             <div class="m-1">
               <div class="flex gap-2 items-center">
                 <!-- <div class="i-material-symbols-code text-blue-400"></div> -->
                 <NuxtImg src="/images/code.png" class="w-5 h-5" />
 
-                <p class="text-xl">Frontend Developer @444 (MyNavi Group)</p>
+                <p class="text-base font-semibold lg:text-xl">
+                  Frontend Developer @444 (MyNavi Group)
+                </p>
               </div>
-              <p class="text-base text-gray-500 font-semibold ml-7">
+              <p class="text-sm lg:text-base text-gray-500 font-semibold ml-7">
                 2023 July - <span class="underline">Present</span>
               </p>
-              <ul class="ml-7 my-2 list-none">
+              <ul class="ml-7 my-2 lg:list-none">
                 <li>
                   Migrated Vue2 to Vue3/Nuxt3 for SSR, enhancing performance and
                   maintainability.
@@ -125,11 +142,12 @@ console.log(
                 </li>
               </ul>
 
-              <div class="flex gap-2 text-xl ml-7">
+              <div class="flex gap-3 text-xl ml-7">
                 <div class="i-logos-vue"></div>
                 <div class="i-logos-nuxt-icon"></div>
                 <div class="i-logos-typescript-icon"></div>
                 <div class="i-logos-unocss"></div>
+                <div class="i-logos-figma"></div>
               </div>
             </div>
             <div class="m-1">
@@ -137,13 +155,15 @@ console.log(
                 <!-- <div class="i-material-symbols-code text-blue-400"></div> -->
                 <NuxtImg src="/images/code.png" class="w-5 h-5" />
 
-                <p class="text-xl">Frontend Developer @Egodiva</p>
+                <p class="text-base font-semibold lg:text-xl">
+                  Frontend Developer @Egodiva
+                </p>
               </div>
-              <p class="text-base text-gray-500 font-semibold ml-7">
+              <p class="text-sm lg:text-base text-gray-500 font-semibold ml-7">
                 2022 Aug - 2023 May
               </p>
 
-              <ul class="ml-7 my-2 list-none text-lg">
+              <ul class="ml-7 my-2 lg:list-none">
                 <li>
                   Developd landing pages that align with the design mock-ups.
                 </li>
@@ -156,22 +176,23 @@ console.log(
                   standards.
                 </li>
               </ul>
-              <div class="flex gap-2 text-xl ml-7">
+              <div class="flex gap-3 text-xl ml-7">
                 <div class="i-logos-javascript"></div>
                 <div class="i-logos-sass"></div>
                 <div class="i-logos-wordpress-icon"></div>
+                <div class="i-logos-figma"></div>
               </div>
             </div>
           </div>
-          <div class="">
+          <div class="hidden lg:block w-10">
             <div
               class="i-material-symbols-arrow-cool-down-rounded text-2xl animate-bounce"
             ></div>
           </div>
-        </div>
-        <div
+        </section>
+        <section
           id="section3"
-          class="subsection flex-none basis-full flex justify-center items-center snap-start flex flex-col gap-2 p-2"
+          class="subsection p-4 flex-none basis-full flex justify-center items-center snap-start flex flex-col gap-6 p-2 w-auto md:w-150 lg:w-auto md:m-auto"
         >
           <div v-for="work in works" :key="work.id" class="w-full">
             <WorkCard
@@ -182,7 +203,7 @@ console.log(
               :link="work.link"
             />
           </div>
-        </div>
+        </section>
         <!-- <div id="section4" class="subsection">Section 4</div> -->
       </div>
     </div>
@@ -190,7 +211,7 @@ console.log(
 </template>
 
 <style scoped>
-/* .container { */
+/* .maincon { */
 /* overflow: hidden;  Hide overflow content */
 /* display: flex; Flex layout for horizontal alignment */
 /* scroll-snap-type: x mandatory; Enable horizontal snap scrolling */
@@ -198,18 +219,22 @@ console.log(
 /* scrollbar-width: none; Hide scrollbar (Firefox) */
 /* } */
 
-.container::-webkit-scrollbar {
+.maincon::-webkit-scrollbar {
   display: none; /* Hide scrollbar (WebKit) */
 }
 
 /* .subsection { */
-/* flex: 0 0 100%; Each section takes 100% of the container's width */
+/* flex: 0 0 100%; Each section takes 100% of the maincon's width */
 /* height: 100%; */
 /* display: flex;
   align-items: center;
   justify-content: center; */
 /* background-color: lightblue; */
-/* scroll-snap-align: start; Snap each section to the start of the container */
+/* scroll-snap-align: start; Snap each section to the start of the maincon */
 /* border: 1px solid #555; */
 /* } */
+
+section {
+  /* border: 1px solid red; */
+}
 </style>
