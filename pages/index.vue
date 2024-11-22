@@ -128,7 +128,7 @@ console.log(
               </p>
               <ul class="ml-7 my-2 lg:list-none">
                 <li>
-                  Migrated Vue2 to Vue3/Nuxt3 for SSR, enhancing performance and
+                  Migrated Vue2 to Vue3/Nuxt3, enhancing performance and
                   maintainability.
                 </li>
                 <li>

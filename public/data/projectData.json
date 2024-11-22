@@ -2,14 +2,14 @@
     "techful": {
         "id": 101,
         "title": "TechFUL (Professional Work)",
-        "description": "A programming skill assessment platform by 444 Inc., featuring over 700 unique challenges and products like Techthon and TechFUL PRO to enhance development skills.",
+        "description": "A programming skill assessment coding platform by 444 Inc., featuring over hundreds of unique challenges to enhance development skills.",
         "image": "/images/part-techful.png",
         "link": "https://techful.com"
     },
     "movieDb": {
         "id": 201,
         "title": "Personalized Movie Db",
-        "description": "Simple movie database interface designed to track, save and organize watchlist and favorites, tailored to personal preferences.",
+        "description": "Simple movie database designed to track and save watchlist and favorites, tailored to personal preferences.",
         "image": "/images/part-movie.png",
         "link": "works/movie-db"
     },
