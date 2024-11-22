@@ -1,42 +1,5 @@
 <script setup lang="ts">
-// import type { ActiveStock } from "~/utils/type";
 import works from "~/public/data/projectData.json";
-
-// const fetchData = async (): Promise<ActiveStock[]> => {
-//   const data = await $fetch<ActiveStock[]>(
-//     "https://financialmodelingprep.com/api/v3/stock_market/actives?apikey=Ai7NmAPUE7MqHIsSWf4dgsoSvOa658He"
-//   );
-
-//   console.log(data);
-//   return data.slice(0, 10);
-// };
-
-// const activeStocks = ref<ActiveStock[]>([]);
-// onMounted(async () => {
-//   // activeStocks.value = await fetchData();
-
-//   const maincon = document.querySelector(".maincon");
-//   const sections = document.querySelectorAll(".subsection");
-
-//   let currentSectionIndex = 0;
-
-//   maincon.addEventListener("wheel", (event) => {
-//     event.preventDefault(); // Prevent default scroll behavior
-
-//     if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
-//       // Scroll right
-//       currentSectionIndex++;
-//     } else if (event.deltaY < 0 && currentSectionIndex > 0) {
-//       // Scroll left
-//       currentSectionIndex--;
-//     }
-
-//     sections[currentSectionIndex].scrollIntoView({
-//       behavior: "smooth",
-//       inline: "start",
-//     });
-//   });
-// });
 
 console.log(
   "https://www.flaticon.com/free-icons/code",

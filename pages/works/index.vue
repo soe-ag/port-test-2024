@@ -12,7 +12,7 @@ const items = ref([
   },
   {
     id: 2,
-    title: "Botha  Gallery Website",
+    title: "Botha Gallery Website",
     description: "work.description",
     image: "/images/oldworks/part-botha-gallery (2).png",
     link: "https://lp.bo-tha.com/official_character_gallery/202212/",
