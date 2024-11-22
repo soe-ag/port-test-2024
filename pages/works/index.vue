@@ -46,32 +46,48 @@ const items = ref([
 </script>
 
 <template>
-  <div class="p-4 md:p-6 max-w-180 m-auto">
-    <h3 class="text-center mb-8">Past Works</h3>
+  <div class="p-4 md:p-6 w-full">
+    <h3
+      class="text-center mb-4 underline-offset-4 underline decoration-blue-400"
+    >
+      Past Works
+    </h3>
     <!-- <section class="grid grid-cols-1 sm:grid-cols-2 gap-6"></section> -->
 
-    <Timeline :value="items" align="alternate" class="customized-timeline">
-      <template #marker="slotProps">
-        <span
-          class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
-        >
-          <NuxtLink :to="slotProps.item.github" target="_blank">
-            <div
-              class="i-simple-icons-github text-white text-2xl hover:text-blue-300"
-            />
-          </NuxtLink>
-        </span>
-      </template>
-      <template #content="slotProps">
-        <ArchiveCard
-          :id="slotProps.item.id"
-          :title="slotProps.item.title"
-          :description="slotProps.item.description"
-          :image="slotProps.item.image"
-          :link="slotProps.item.link"
-          :github="slotProps.item.github"
-        />
-      </template>
-    </Timeline>
+    <div class="h-85vh p-6 overflow-y-auto timelineWrapper">
+      <Timeline
+        :value="items"
+        align="alternate"
+        class="h-auto max-w-180 m-auto"
+      >
+        <template #marker="slotProps">
+          <span
+            class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+          >
+            <NuxtLink :to="slotProps.item.github" target="_blank">
+              <div
+                class="i-simple-icons-github text-white text-2xl hover:text-blue-300"
+              />
+            </NuxtLink>
+          </span>
+        </template>
+        <template #content="slotProps">
+          <ArchiveCard
+            :id="slotProps.item.id"
+            :title="slotProps.item.title"
+            :description="slotProps.item.description"
+            :image="slotProps.item.image"
+            :link="slotProps.item.link"
+            :github="slotProps.item.github"
+          />
+        </template>
+      </Timeline>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.timelineWrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar (WebKit) */
+}
+</style>
