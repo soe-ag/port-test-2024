@@ -30,35 +30,30 @@ import ScrollTop from "primevue/scrolltop";
             </div>
 
             <p class="text-sm">
-              This project started from a simple wish, having my own database to
-              store and organize my favorite movies and TV series. I had tried
-              using IMDb for tracking my watch list and favorites, but I found
-              the interface a bit clunky and heavy for my needs. So, I set out
-              to create a personalized, lightweight solution. This is just Phase
-              1 of the project, and I'll continue adding features based on what
-              I find useful, with plans for a Phase 2 release in the future.
+              This project began with a simple goal: to create a personal
+              database for organizing and tracking my favorite movies and TV
+              series. While IMDb was a great resource, I found its interface
+              overloaded for my specific needs. I wanted something lightweight,
+              and tailored to how I like to manage my watch list and favorites.
+              This version is just the starting point, and I plan to build on
+              it, incorporating additional features as I discover what works
+              best for me.
             </p>
           </div>
           <div>
             <h3 class="text-gray-300 mb-2">Features</h3>
             <ul class="ml-4 text-sm mb-2">
               <li>
-                Discover Trending Movies: Check out the latest popular movies.
+                Discover trending movies and explore the latest popular titles.
               </li>
-              <li>Search Movies and TV Series: Easily look up titles.</li>
-              <li>
-                Track What to Watch: Keep a list of movies and series to watch
-                later.
-              </li>
-              <li>
-                Save Favorites: Collect all my favorite titles in one place for
-                quick access.
-              </li>
+              <li>Search for movies and TV series with simplicity.</li>
+              <li>Track and organize watchlist.</li>
+              <li>Save and access favorite titles in one place.</li>
             </ul>
-            <p class="text-sm">
+            <!-- <p class="text-sm">
               This app is designed to make tracking my favorite content simple,
               convenient, and tailored to my preferences.
-            </p>
+            </p> -->
           </div>
         </div>
         <NuxtLink
@@ -85,17 +80,14 @@ import ScrollTop from "primevue/scrolltop";
         <div>
           <h3 class="text-gray-300 mb-2">Stack and explanation</h3>
           <p class="text-sm">
-            I have a solid foundation in Vue, and for this project, I decided to
-            work with Nuxt to incorporate server-side rendering (SSR) and take
-            advantage of Nuxt’s straightforward routing features. Since I use
-            UnoCSS at work, I chose it here as well for a familiar, efficient
-            styling experience, aiming to get the job done with my most-used
-            tools rather than focusing on the "perfect" stack. I originally went
-            with Firebase for the database, but I switched to Supabase because
-            it just worked better for what I needed, and the documentation made
-            things a lot easier to follow. Firebase felt a bit complicated since
-            it needs different setups for client and server, plus specific SDKs
-            like Firebase Admin on the server side.
+            For this project, I chose Nuxt for its server-side rendering (SSR)
+            and straightforward routing, leveraging my Vue experience. I used
+            UnoCSS for styling, as it’s a tool I’m already familiar with from
+            work. Although I started with Firebase, I switched to Supabase
+            because it better suited my needs, offering simpler setup and
+            clearer documentation. Firebase’s setup felt overly complex,
+            requiring separate configurations and SDKs for client and server
+            environments.
           </p>
         </div>
       </section>
@@ -104,21 +96,15 @@ import ScrollTop from "primevue/scrolltop";
         <div>
           <h3 class="text-gray-300 mb-2">Problems and thought process</h3>
           <p class="text-sm">
-            I initially started with local storage for saving data since I
-            wasn’t familiar with Firebase or Supabase yet. But as the project
-            evolved, I wanted access to my data from any device, which local
-            storage couldn’t offer.
-            <!-- Plus, I wanted to challenge myself with new
-            technologies. Switching to Supabase opened up more possibilities,
-            like adding authentication, querying, and filtering—making data
-            manipulation easier.  -->
-            The first hurdle was setting up the environment and dependencies
-            without breaking anything in the existing project. After a lot of
-            trial and error, I got it running smoothly. Next, I tackled
-            Supabase’s built-in auth, setting up user accounts for secure data
-            access. Initially, I’d written everything as client-side API calls,
-            but eventually refactored for server-side rendering where it made
-            sense, which streamlined data handling on page load.
+            I initially used local storage to save data, as I wasn't familiar
+            with Firebase or Supabase. However, as the project grew, I realized
+            I needed access to my data from multiple devices, which local
+            storage couldn’t provide. The first challenge was integrating
+            supabase without disrupting the existing project. After some trial
+            and error, I got everything running smoothly. Originally, I used
+            client-side API calls, but I later refactored the project to
+            incorporate server-side rendering, improving data handling when the
+            page loaded.
             <!-- Along
             the way, I cleaned up my code to make it reusable and followed some
             best practices from my work environment, even though this was a
@@ -147,20 +133,15 @@ import ScrollTop from "primevue/scrolltop";
         <div>
           <h3 class="text-gray-300 mb-2">Lessons learned</h3>
           <p class="text-sm">
-            Working on this project has been a huge learning experience,
-            especially in building something from scratch. I’ve gained a solid
-            understanding of Nuxt, Supabase, and API implementation, along with
-            the skills to troubleshoot bugs effectively. In the beginning, I
-            focused on getting each feature working, which meant writing simpler
-            code to keep things moving. Later, I went back to refactor it for
-            reusability and clarity, knowing that would make it easier to expand
-            in the future. Since I didn’t start with a defined design or
-            component structure, I found myself constantly writing, deleting,
-            and editing to improve readability and maintainability. This
-            approach worked, but I realized how much easier things would have
-            been with a good design and structure from the start. It would’ve
-            saved time, reduced rework, and probably prevented a few headaches
-            along the way 😄.
+            This project has been a valuable learning experience, especially in
+            building from scratch. I've gained a good understanding of Nuxt,
+            Supabase, and working with API integration. At first, I focused on
+            getting features working quickly with simple code, then went back to
+            refactor it for better reusability and clarity. Since I didn’t start
+            with a clear design, I ended up iterating a lot to improve
+            readability and maintenance. Looking back, having a solid design and
+            structure from the start would have saved time and prevented some
+            frustration! 😄
           </p>
         </div>
       </section>
@@ -169,15 +150,19 @@ import ScrollTop from "primevue/scrolltop";
         <h3 class="text-gray-300 mb-2">Features plan to add later</h3>
         <ul class="ml-4 text-sm">
           <li>
-            Sorting the watchlist and favorites by rating and release year
+            Sorting the watchlist and favorites by rating and release year.
           </li>
           <li>
-            Adding filters for custom views, like by year, rating, or type
+            Adding custom filters for views based on criteria like year, rating,
+            or type.
           </li>
-          <li>Enhancing the UI for a more visually appealing experience</li>
           <li>
-            Expanding API calls to include more data, like top movies of 2024 or
-            highest-rated IMDb films
+            Improving the UI for a more engaging and visually appealing
+            experience.
+          </li>
+          <li>
+            Expanding API calls to fetch additional data, such as top movies of
+            2024 or the highest-rated films on IMDb.
           </li>
         </ul>
       </section>

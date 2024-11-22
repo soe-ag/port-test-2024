@@ -33,10 +33,10 @@ import ScrollTop from "primevue/scrolltop";
               and indices for personal investing. While it offers extensive
               tools and features, I wanted a simpler, personalized dashboard to
               quickly access my favorite assets and customize how I interact
-              with charts. This project aims to address that need, starting with
-              Phase 1, which includes core functionalities. Future updates in
-              Phase 2 and beyond will introduce additional features based on my
-              usage and requirements.
+              with charts. This project is designed to meet that need, starting
+              with the essential features in the first phase. As I continue
+              using it, future updates will add more features based on my
+              evolving needs and how I interact with the platform.
             </p>
           </div>
           <div>
@@ -52,18 +52,18 @@ import ScrollTop from "primevue/scrolltop";
                 prices.
               </li>
               <li>
-                Compare selected stocks with two default options: Apple and
+                Compare selected stock with two default stocks: Apple and
                 Google.
               </li>
               <li>
-                Use a TradingView widget in the footer to check current prices
+                The Trading View widget is in the footer to check current prices
                 conveniently.
               </li>
             </ul>
-            <p class="text-sm">
+            <!-- <p class="text-sm">
               This app is designed to make tracking my favorite content simple,
               convenient, and tailored to my preferences.
-            </p>
+            </p> -->
           </div>
         </div>
         <NuxtLink
@@ -101,10 +101,10 @@ import ScrollTop from "primevue/scrolltop";
             Initially, I used Chart.js, a library I’m familiar with from my
             workplace. However, I later switched to TradingView's lightweight
             charts because they are more visually appealing and offer a wider
-            variety of chart types for customization. For the data API, after
-            extensive research, I selected Alpha Vantage. It stood out for its
-            generous free-tier limit on daily API calls, making it the most
-            convenient option for my needs.
+            variety of chart types for customization. For the data, I chose
+            Alpha Vantage after researching available options, as it offers an
+            ample free-tier limit of 25 API calls per day, making it the most
+            convenient choice.
           </p>
         </div>
       </section>
@@ -113,17 +113,14 @@ import ScrollTop from "primevue/scrolltop";
         <div>
           <h3 class="text-gray-300 mb-2">Problems and thought process</h3>
           <p class="text-sm">
-            At first, I integrated Supabase to display data fetched from the
-            database. However, when the API limit became a constraint, I decided
-            to bypass Supabase and display only the API's returned data
-            directly. With a daily limit of 25 API calls, I focused on
-            minimizing API usage. I generated multiple types of charts from a
-            single API call and updated the data only when necessary.
-            Additionally, I couldn’t retrieve index fund data, so I postponed
-            implementing a comparison feature between index funds and selected
-            stocks. As there are different types of charts available to
-            visualize price trends, I experimented to find the ones that best
-            suited my preferences. Since this was my first time using the
+            At first, I integrated Supabase to fetch data from the API, store it
+            in the database, and retrieve it as needed. However, when the API
+            limit became a constraint, I decided to remove Supabase and directly
+            display the data returned by the API. I designed the dashboard to
+            show different types of charts from a single API call, updating the
+            data only when necessary. Currently, I couldn’t retrieve index fund
+            data, so I postponed implementing a comparison feature between index
+            funds and selected stocks. Since this was my first time using the
             library, I started with simple configurations and gradually added
             complexity as I became more familiar with its features.
           </p>

@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
   <div
-    class="flex flex-col gap-4 justify-evenly text-gray-300 relative max-w-75"
+    class="flex flex-col gap-2 md:gap-4 justify-evenly text-gray-300 relative max-w-75"
     :class="{ 'items-start': id % 2 === 1, 'items-end': id % 2 === 0 }"
   >
     <!-- <div
@@ -26,7 +26,7 @@ defineProps<{
           class="decoration-none text-gray-200 hover:text-blue-400 font-semibold"
           :to="link"
         >
-          <p class="text-sm text-wrap">{{ title }}</p>
+          <p class="text-sm text-wrap mx-1">{{ title }}</p>
         </NuxtLink>
         <!-- <NuxtLink :to="github" target="_blank">
           <div
@@ -42,7 +42,7 @@ defineProps<{
     <NuxtLink class="" :to="link" target="_blank">
       <NuxtImg
         :src="image"
-        class="m-auto rounded-2 b-2 b-solid w-40 lg:w-60 hover:b-blue-400 b-gray-600 hover:cursor-pointer"
+        class="m-auto rounded-2 b-2 b-solid w-35 sm:w-40 md:w-50 lg:w-60 hover:b-blue-400 b-gray-600 hover:cursor-pointer"
       />
     </NuxtLink>
     <!-- <div
