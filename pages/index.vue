@@ -20,7 +20,16 @@ console.log(
             <p>SOE AUNG</p>
             <NuxtLink :to="'https://github.com/soe-ag'" target="_blank">
               <div
-                class="i-simple-icons-github text-white text-xl hover:text-blue-300"
+                class="i-simple-icons-github text-white text-xl transition hover:scale-120 hover:-rotate-10"
+              />
+            </NuxtLink>
+
+            <NuxtLink
+              :to="'https://www.linkedin.com/in/soe-aung-072a30129/'"
+              target="_blank"
+            >
+              <div
+                class="i-simple-icons-linkedin text-#0077b5 text-xl transition hover:scale-120 hover:-rotate-10"
               />
             </NuxtLink>
           </div>

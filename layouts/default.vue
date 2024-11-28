@@ -39,7 +39,10 @@ const route = useRoute();
             }"
             class="no-underline rounded-1 m-1 w-fit px-1 h-8 flex justify-center items-center gap-1"
           >
-            <div :class="menu.icon" class="text-xl" />
+            <div
+              :class="menu.icon"
+              class="text-xl transition hover:scale-120"
+            />
             <div class="">{{ menu.label }}</div>
           </NuxtLink>
         </div>
